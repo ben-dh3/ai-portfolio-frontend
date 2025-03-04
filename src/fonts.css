@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('./fonts/Mulish-VariableFont_wght.ttf') format('truetype');
+}
