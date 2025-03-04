@@ -1,10 +1,12 @@
 import axios from 'axios';
 
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3000';
+const API_KEY = process.env.REACT_APP_API_KEY; 
 
 const apiClient = axios.create({
   baseURL: API_URL,
   headers: {
+    'x-api-key': API_KEY,
     'Content-Type': 'application/json',
   },
 });

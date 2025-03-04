@@ -10,6 +10,14 @@
       "StackName": "amplify-aiportfolioadvice-dev-45328",
       "StackId": "arn:aws:cloudformation:eu-west-2:216989121086:stack/amplify-aiportfolioadvice-dev-45328/40029c30-f91f-11ef-9207-0afdf20c3c25",
       "AmplifyAppId": "d5ohu7yc8el7a"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d5ohu7yc8el7a",
+          "type": "cicd"
+        }
+      }
     }
   }
 }
