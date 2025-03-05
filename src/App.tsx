@@ -23,7 +23,6 @@ function AppContent() {
   const [activeIndex, setActiveIndex] = useState(0);
   const queryClient = useQueryClient();
   
-  // Handle wallet loaded from initial form
   const handleWalletSaved = (address: string, portfolio: Portfolio, advice: AdviceResponse) => {
     // Cache the data in React Query
     queryClient.setQueryData(['portfolio', address], { portfolio });

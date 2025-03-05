@@ -64,10 +64,12 @@ const SaveWalletView: React.FC<SaveWalletViewProps> = ({ onWalletSaved }) => {
             <div className="container flex flex-col lg:flex-row w-full px-4 md:px-8 lg:px-16 py-16 gap-8">
                 <div className="flex-1">
                     <h1 className="font-montserrat font-semibold text-4xl md:text-5xl lg:text-6xl">
-                        AI PORTFOLIO ADVISOR
+                        AI PORTFOLIO
                     </h1>
-                    <p className="text-lg mt-4">
-                        The AI Portfolio Advisor is a tool that fetches your crypto wallet address portfolio data, and analyses it based on current news sentiment. Giving you current advice on your investment allocation.
+                    <p className="text-lg mt-4 whitespace-pre-line text-wrap">
+                        {`The AI portfolio uses the Claude LLM to analyse news sentiment and portfolio data to generate suggestions on your investment allocation.
+                        
+                        To begin, enter your crypto wallet address below. Your portfolio will be generated using data from the Zapper API, while news on your specific token holdings is fetched from CryptoPanic API. See your suggestions in the analysis tab.`}
                     </p>
 
                     {/* Address entry bar */}
