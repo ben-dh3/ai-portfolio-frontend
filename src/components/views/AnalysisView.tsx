@@ -62,7 +62,7 @@ const AnalysisView: React.FC = () => {
             <div className='flex lg:mx-40'>
 
                 <div className="rounded-2xl p-4 flex-1 whitespace-pre-line text-wrap bg-primary-800">
-                {adviceData.recommendations.text}
+                {adviceData.recommendations.text.text}
                 </div>
 
                 <div className='flex-1'>

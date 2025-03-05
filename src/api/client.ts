@@ -33,7 +33,10 @@ export interface AdviceResponse {
   walletAddress: string;
   lastUpdated: string;
   recommendations: {
-    text: string,
+    text: {
+      text: string,
+      type: string
+    },
     type: string
   }
 }
