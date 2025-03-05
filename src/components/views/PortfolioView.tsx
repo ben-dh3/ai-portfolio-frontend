@@ -51,7 +51,7 @@ const PortfolioView: React.FC = () => {
     if (error) {
         return (
             <div className="text-center py-8">
-                <p className="text-red-400 mb-4">Error loading portfolio data</p>
+                <p className="text-primary-100 mb-4">Error loading portfolio data</p>
                 <button 
                     onClick={() => refetch()}
                     className="bg-primary-700 hover:bg-primary-600 text-primary-50 px-4 py-2 rounded"
@@ -72,7 +72,6 @@ const PortfolioView: React.FC = () => {
             <div className='bg-primary-800 py-8'>
                 <div className="lg:gap-20 lg:mx-40 flex flex-col lg:flex-row">
                     
-
                     {/* Pie Chart */}
                     <div className="flex flex-1 flex-row gap-4">
                         <div className='font-montserrat font-bold text-2xl'>
@@ -134,7 +133,7 @@ const PortfolioView: React.FC = () => {
                         portfolioData.holdings.map((token, index) => (
                             <div 
                                 key={`${token.network}-${token.symbol}-${index}`}
-                                className="grid grid-cols-7 gap-4 px-4 py-3 border-b border-primary-600 hover:bg-primary-700"
+                                className="grid grid-cols-7 gap-4 px-4 py-3 border-b border-primary-600 hover:bg-primary-900"
                             >
                                 {/* Token Icon & Symbol */}
                                 <div className="col-span-2 flex items-center gap-2">

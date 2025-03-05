@@ -29,6 +29,14 @@ export interface Portfolio {
   lastUpdated: string;
 }
 
+export interface NewsItem {
+  title: string;
+  url: string;
+  domain: string;
+  created_at?: string;
+  published_at?: string;
+}
+
 export interface AdviceResponse {
   walletAddress: string;
   lastUpdated: string;
@@ -38,7 +46,11 @@ export interface AdviceResponse {
       type: string
     },
     type: string
-  }
+  };
+  news?: {
+    bearish: NewsItem[];
+    bullish: NewsItem[];
+  };
 }
 
 // API functions

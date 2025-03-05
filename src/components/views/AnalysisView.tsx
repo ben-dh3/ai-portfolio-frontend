@@ -3,6 +3,7 @@ import { AdviceResponse } from "../../api/client";
 import { useQuery } from '@tanstack/react-query';
 import { portfolioApi } from '../../api/client';
 import { useWallet } from '../../context/WalletContext';
+import NewsCard from '../NewsCard';
 
 const AnalysisView: React.FC = () => {
     const { walletAddress, isWalletVerified } = useWallet();
@@ -59,14 +60,25 @@ const AnalysisView: React.FC = () => {
                 </div>
             </div>
 
-            <div className='flex lg:mx-40'>
+            <div className='gap-4 flex flex-col lg:flex-row lg:mx-40'>
 
                 <div className="rounded-2xl p-4 flex-1 whitespace-pre-line text-wrap bg-primary-800">
                 {adviceData.recommendations.text.text}
                 </div>
 
-                <div className='flex-1'>
-
+                <div className='flex-1 space-y-4'>
+                    {adviceData.news?.bullish && (
+                        <NewsCard 
+                            news={adviceData.news.bullish} 
+                            type="bullish" 
+                        />
+                    )}
+                    {adviceData.news?.bearish && (
+                        <NewsCard 
+                            news={adviceData.news.bearish} 
+                            type="bearish" 
+                        />
+                    )}
                 </div>
             </div>
            

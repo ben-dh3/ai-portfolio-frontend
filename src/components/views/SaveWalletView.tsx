@@ -67,7 +67,7 @@ const SaveWalletView: React.FC<SaveWalletViewProps> = ({ onWalletSaved }) => {
                         AI PORTFOLIO
                     </h1>
                     <p className="text-lg mt-4 whitespace-pre-line text-wrap">
-                        {`The AI portfolio uses the Claude LLM to analyse news sentiment and portfolio data to generate suggestions on your investment allocation.
+                        {`The AI Portfolio uses the Claude LLM to analyse news sentiment and portfolio data to generate suggestions on your investment allocation.
                         
                         To begin, enter your crypto wallet address below. Your portfolio will be generated using data from the Zapper API, while news on your specific token holdings is fetched from CryptoPanic API. See your suggestions in the analysis tab.`}
                     </p>
