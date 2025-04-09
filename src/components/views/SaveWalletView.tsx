@@ -64,7 +64,7 @@ const SaveWalletView: React.FC<SaveWalletViewProps> = ({ onWalletSaved }) => {
             <div className="container flex flex-col lg:flex-row w-full px-4 md:px-8 lg:px-16 py-16 gap-8">
                 <div className="flex-1">
                     <h1 className="font-montserrat font-semibold text-4xl md:text-5xl lg:text-6xl">
-                        AI PORTFOLIO
+                        AI CRYPTO PORTFOLIO
                     </h1>
                     <p className="text-lg mt-4 whitespace-pre-line text-wrap">
                         {`The AI Portfolio uses the Claude LLM to analyse news sentiment and portfolio data to generate suggestions on your investment allocation.
