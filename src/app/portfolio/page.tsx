@@ -163,6 +163,8 @@ if (error) {
                             <Image 
                                 src={token.imgUrl} 
                                 alt={token.symbol} 
+                                width={20}
+                                height={20}
                                 className="w-8 h-8 rounded-full"
                             />
                         ) : (
@@ -198,6 +200,8 @@ if (error) {
                                 <Image 
                                     src={networkIcons[token.network]} 
                                     alt={token.network} 
+                                    width={20} 
+                                    height={20}
                                     className="w-5 h-5 rounded-full"
                                 />
                             ) : (
