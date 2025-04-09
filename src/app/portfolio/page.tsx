@@ -8,6 +8,7 @@ import WalletContainer from '../../components/WalletContainer';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const networkIcons: Record<string, string> = {
     "Arbitrum": "/networks/arbitrum.svg",
@@ -83,8 +84,8 @@ if (error) {
     <div className="gap-10 bg-primary-900 h-full w-full flex flex-col">
       <div className="bg-primary-800 p-3 flex justify-between border-b border-primary-600">
         <div className="text-md flex gap-4">
-          <a href="/portfolio" className="p-3 rounded-lg bg-primary-700">Portfolio</a>
-          <a href="/analysis" className="p-3 rounded-lg bg-primary-800 hover:bg-primary-700">Analysis</a>
+          <Link href="/portfolio" className="p-3 rounded-lg bg-primary-700">Portfolio</Link>
+          <Link href="/analysis" className="p-3 rounded-lg bg-primary-800 hover:bg-primary-700">Analysis</Link>
         </div>
         <WalletContainer walletAddress={walletAddress} onClose={clearWallet} />
       </div>

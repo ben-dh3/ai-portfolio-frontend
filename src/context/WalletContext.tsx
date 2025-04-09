@@ -11,17 +11,9 @@ interface WalletContextType {
 const WalletContext = createContext<WalletContextType | undefined>(undefined);
 
 export const WalletProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [walletAddress, setWalletAddress] = useState('');
-  const [isWalletVerified, setWalletVerified] = useState(false);
+  const [walletAddress, setWalletAddress] = useState(() => localStorage.getItem('walletAddress') || '');
+  const [isWalletVerified, setWalletVerified] = useState(() => !!localStorage.getItem('walletAddress'));
 
-  useEffect(() => {
-    const savedWallet = localStorage.getItem('walletAddress');
-    if (savedWallet && isWalletVerified) {
-      setWalletAddress(savedWallet);
-    }
-  }, [isWalletVerified]);
-  
-  // Save to localStorage
   useEffect(() => {
     if (walletAddress && isWalletVerified) {
       localStorage.setItem('walletAddress', walletAddress);
@@ -29,12 +21,12 @@ export const WalletProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       localStorage.removeItem('walletAddress');
     }
   }, [walletAddress, isWalletVerified]);
-  
+
   const clearWallet = () => {
     setWalletAddress('');
     setWalletVerified(false);
   };
-  
+
   return (
     <WalletContext.Provider value={{ walletAddress, setWalletAddress, clearWallet, isWalletVerified, setWalletVerified }}>
       {children}
