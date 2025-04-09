@@ -7,6 +7,7 @@ import PortfolioChart from '../../components/PortfolioChart';
 import WalletContainer from '../../components/WalletContainer';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
+import Image from 'next/image';
 
 const networkIcons: Record<string, string> = {
     "Arbitrum": "/networks/arbitrum.svg",
@@ -159,7 +160,7 @@ if (error) {
                     {/* Token Icon & Symbol */}
                     <div className="col-span-2 flex items-center gap-2">
                         {token.imgUrl ? (
-                            <img 
+                            <Image 
                                 src={token.imgUrl} 
                                 alt={token.symbol} 
                                 className="w-8 h-8 rounded-full"
@@ -194,7 +195,7 @@ if (error) {
                     <div className="flex items-center justify-center">
                         <div className="flex items-center gap-1">
                             {networkIcons[token.network] ? (
-                                <img 
+                                <Image 
                                     src={networkIcons[token.network]} 
                                     alt={token.network} 
                                     className="w-5 h-5 rounded-full"
