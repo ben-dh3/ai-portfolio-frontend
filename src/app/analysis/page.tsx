@@ -3,7 +3,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { AdviceResponse, portfolioApi } from '../../lib/api';
 import { useWallet } from '../../context/WalletContext';
-import PortfolioChart from '../../components/PortfolioChart';
 import WalletContainer from '../../components/WalletContainer';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
@@ -29,6 +28,24 @@ export default function AnalysisPage() {
 
   if (!adviceData) {
     return <div className="text-center py-8">No analysis data available</div>;
+}
+
+if (isLoading) {
+    return <div className="text-center py-8">Loading analysis data...</div>;
+}
+
+if (error) {
+    return (
+        <div className="text-center py-8">
+            <p className="text-red-400 mb-4">Error loading analysis data</p>
+            <button 
+                onClick={() => refetch()}
+                className="bg-primary-700 hover:bg-primary-600 text-primary-50 px-4 py-2 rounded"
+            >
+                Try Again
+            </button>
+        </div>
+    );
 }
 
   if (!isWalletVerified) return null;

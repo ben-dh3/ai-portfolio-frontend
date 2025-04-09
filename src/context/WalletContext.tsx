@@ -19,7 +19,7 @@ export const WalletProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     if (savedWallet && isWalletVerified) {
       setWalletAddress(savedWallet);
     }
-  }, []);
+  }, [isWalletVerified]);
   
   // Save to localStorage
   useEffect(() => {
@@ -28,7 +28,7 @@ export const WalletProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     } else {
       localStorage.removeItem('walletAddress');
     }
-  }, [isWalletVerified]);
+  }, [walletAddress, isWalletVerified]);
   
   const clearWallet = () => {
     setWalletAddress('');

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const networkIcons = [
   { src: "https://storage.googleapis.com/zapper-fi-assets/networks/ethereum-icon.png", alt: "Ethereum", delay: 0, top: 0, left: 0, width: 40 },
@@ -26,7 +27,7 @@ const NetworkBackground = () => {
         }}
       >
         {networkIcons.map((icon, index) => (
-          <img 
+          <Image
             key={index}
             src={icon.src}
             alt={icon.alt}

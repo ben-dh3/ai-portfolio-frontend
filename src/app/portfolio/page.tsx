@@ -58,6 +58,24 @@ export default function PortfolioPage() {
     return <div className="text-center py-8">No portfolio data available</div>;
 }
 
+if (isLoading) {
+    return <div className="text-center py-8">Loading portfolio data...</div>;
+}
+
+if (error) {
+    return (
+        <div className="text-center py-8">
+            <p className="text-primary-100 mb-4">Error loading portfolio data</p>
+            <button 
+                onClick={() => refetch()}
+                className="bg-primary-700 hover:bg-primary-600 text-primary-50 px-4 py-2 rounded"
+            >
+                Try Again
+            </button>
+        </div>
+    );
+}
+
   if (!isWalletVerified) return null;
 
   return (
