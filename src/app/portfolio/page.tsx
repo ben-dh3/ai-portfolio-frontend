@@ -81,7 +81,7 @@ if (error) {
 
   return (
     <div className="gap-10 bg-primary-900 h-full w-full flex flex-col">
-      <div className="bg-primary-800 font-mulish p-3 flex justify-between border-b border-primary-600">
+      <div className="bg-primary-800 p-3 flex justify-between border-b border-primary-600">
         <div className="text-md flex gap-4">
           <a href="/portfolio" className="p-3 rounded-lg bg-primary-700">Portfolio</a>
           <a href="/analysis" className="p-3 rounded-lg bg-primary-800 hover:bg-primary-700">Analysis</a>
@@ -96,7 +96,7 @@ if (error) {
         
         {/* Pie Chart */}
         <div className="flex flex-1 flex-row gap-4">
-            <div className='font-montserrat font-bold text-2xl'>
+            <div className='font-bold text-2xl'>
                 Portfolio Summary
             </div>
             <div>
@@ -108,7 +108,7 @@ if (error) {
         </div>
 
         {/* Total Value Card */}
-        <div className="font-mulish justify-end flex flex-1 flex-col ">
+        <div className="justify-end flex flex-1 flex-col ">
             <div className='flex justify-between p-4 text-primary-100 bg-primary-900 rounded-2xl'>
                 
                 <div className='flex flex-col justify-center'>
@@ -137,7 +137,7 @@ if (error) {
     </div>
 </div>
 
-<div className='font-mulish text-primary-50 lg:mx-40'>
+<div className='text-primary-50 lg:mx-40'>
     {/* Token List Header */}
     <div className="grid grid-cols-7 gap-4 px-4 py-2 bg-primary-700 font-semibold rounded-t-lg">
         <div className="col-span-2">Token</div>

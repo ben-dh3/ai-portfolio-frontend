@@ -70,7 +70,7 @@ export default function Home() {
                 id="walletAddress"
                 type="text"
                 placeholder="Wallet Address (0x000...000)"
-                className="font-mulish w-full placeholder-primary-200 bg-primary-700 py-3 px-4 text-center"
+                className="w-full placeholder-primary-200 bg-primary-700 py-3 px-4 text-center"
                 value={walletAddress}
                 onChange={(e) => setWalletAddress(e.target.value)}
                 disabled={isPending}

@@ -34,7 +34,7 @@ const NewsCard: React.FC<NewsCardProps> = ({ news, type }) => {
   const currentNews = news[currentIndex];
 
   return (
-    <div className="font-mulish h-40 bg-primary-800 rounded-2xl flex flex-row">
+    <div className="h-40 bg-primary-800 rounded-2xl flex flex-row">
 
         <button 
             onClick={() => handleNavigation('prev')} 

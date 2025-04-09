@@ -52,7 +52,7 @@ if (error) {
 
   return (
     <div className="gap-10 bg-primary-900 h-full w-full flex flex-col">
-      <div className="bg-primary-800 font-mulish p-3 flex justify-between border-b border-primary-600">
+      <div className="bg-primary-800 p-3 flex justify-between border-b border-primary-600">
         <div className="text-md flex gap-4">
           <a href="/portfolio" className="p-3 rounded-lg bg-primary-700">Portfolio</a>
           <a href="/analysis" className="p-3 rounded-lg bg-primary-800 hover:bg-primary-700">Analysis</a>
@@ -60,12 +60,12 @@ if (error) {
         <WalletContainer walletAddress={walletAddress} onClose={clearWallet} />
       </div>
       
-      <div className="gap-10 font-mulish text-primary-50 bg-primary-900 h-full w-full flex flex-col">
+      <div className="gap-10 text-primary-50 bg-primary-900 h-full w-full flex flex-col">
             
             <div className='bg-primary-800 py-8'>
                 <div className='gap-4 p-4 bg-primary-900 flex justify-center lg:mx-40 rounded-2xl'>
                     <div className="flex flex-col">
-                        <h2 className="font-montserrat font-bold text-2xl">Portfolio Analysis</h2>
+                        <h2 className="font-bold text-2xl">Portfolio Analysis</h2>
                         <p className="text-sm">Last updated: {new Date(adviceData.lastUpdated).toLocaleString()}</p>
                     </div>
                     <button 
